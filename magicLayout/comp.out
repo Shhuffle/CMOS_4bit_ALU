@@ -1,0 +1,77 @@
+
+Circuit 1 cell sky130_fd_pr__pfet_01v8 and Circuit 2 cell sky130_fd_pr__pfet_01v8 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+
+Cell transmissionGate (0) disconnected node: X'
+Cell transmissionGate (0) disconnected node: X
+Subcircuit summary:
+Circuit 1: transmissionGate                |Circuit 2: TransmissionGate                
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__nfet_01v8 (1)                |sky130_fd_pr__nfet_01v8 (1)                
+sky130_fd_pr__pfet_01v8 (1)                |sky130_fd_pr__pfet_01v8 (1)                
+Number of devices: 2                       |Number of devices: 2                       
+Number of nets: 6                          |Number of nets: 6                          
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely with port and property errors.
+sky130_fd_pr__pfet_01v8:1 vs. sky130_fd_pr__pfet_01v8:M1:
+ w circuit1: 0.8   circuit2: 1   (delta=22.2%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:0 vs. sky130_fd_pr__nfet_01v8:M2:
+ w circuit1: 0.8   circuit2: 1   (delta=22.2%, cutoff=1%)
+
+Subcircuit pins:
+Circuit 1: transmissionGate                |Circuit 2: TransmissionGate                
+-------------------------------------------|-------------------------------------------
+a_n15_93#                                  |X **Mismatch**                             
+VP                                         |VP                                         
+a_n15_n195#                                |X' **Mismatch**                            
+VN                                         |VN                                         
+A                                          |A                                          
+Y                                          |Y                                          
+X'                                         |(no matching pin)                          
+X                                          |(no matching pin)                          
+---------------------------------------------------------------------------------------
+Cell pin lists for transmissionGate and TransmissionGate altered to match.
+Device classes transmissionGate and TransmissionGate are equivalent.
+
+Cell inverter (0) disconnected node: inv_in
+Subcircuit summary:
+Circuit 1: inverter                        |Circuit 2: inverter                        
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__nfet_01v8 (1)                |sky130_fd_pr__nfet_01v8 (1)                
+sky130_fd_pr__pfet_01v8 (1)                |sky130_fd_pr__pfet_01v8 (1)                
+Number of devices: 2                       |Number of devices: 2                       
+Number of nets: 4                          |Number of nets: 4                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely with port and property errors.
+sky130_fd_pr__pfet_01v8:1 vs. sky130_fd_pr__pfet_01v8:M1:
+ w circuit1: 0.62   circuit2: 2   (delta=105%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:0 vs. sky130_fd_pr__nfet_01v8:M2:
+ w circuit1: 0.62   circuit2: 1   (delta=46.9%, cutoff=1%)
+
+Subcircuit pins:
+Circuit 1: inverter                        |Circuit 2: inverter                        
+-------------------------------------------|-------------------------------------------
+inv_out                                    |inv_out                                    
+a_458_119#                                 |inv_in **Mismatch**                        
+VP                                         |VP                                         
+VN                                         |GND **Mismatch**                           
+inv_in                                     |(no matching pin)                          
+---------------------------------------------------------------------------------------
+Cell pin lists for inverter and inverter altered to match.
+Device classes inverter and inverter are equivalent.
+
+Flattening instances of TransmissionGate in cell Xs_XORTransmissonGate.spice (1) makes a better match
+Flattening instances of inverter in cell Xs_XORTransmissonGate.spice (1) makes a better match
+Making another compare attempt.
+
+Equate elements:  no current cell.
+Device classes Xor.spice and Xs_XORTransmissonGate.spice are equivalent.
+
+Final result: Top level cell failed pin matching.

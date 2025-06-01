@@ -1,0 +1,1 @@
+set xschem_library_paths ". ./GenericSym"

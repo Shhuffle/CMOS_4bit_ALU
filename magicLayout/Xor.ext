@@ -1,0 +1,148 @@
+timestamp 1748723212
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 1e+06
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use inverter inverter_1 1 0 -1765 0 1 -553
+use inverter inverter_0 1 0 -1760 0 1 -220
+use transmissionGate transmissionGate_1 1 0 -946 0 1 -385
+use transmissionGate transmissionGate_0 1 0 -946 0 1 -49
+port "XOR_OUT" 12 -835 -268 -835 -268 m1
+port "VP" 7 -1468 -23 -1468 -23 m1
+port "XOR_IN1" 8 -1047 107 -1047 107 m1
+port "XOR_IN2" 9 -1145 109 -1145 109 m2
+port "inv_in" 3 -1427 -429 -1427 -429 m1
+port "inv_out" 1 -1247 -560 -1247 -560 m1
+port "VP" 4 -1427 -359 -1427 -359 m1
+port "VN" 11 -1459 -494 -1459 -494 m1
+port "VN" 2 -1427 -493 -1427 -493 m1
+node "m1_n961_n271#" 0 34.0142 -961 -271 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 986 126 0 0 0 0 0 0 0 0 0 0
+node "m1_n1257_n236#" 1 241.43 -1257 -236 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5316 542 0 0 0 0 0 0 0 0 0 0
+node "XOR_OUT" 3 314.479 -835 -268 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6590 846 0 0 0 0 0 0 0 0 0 0
+node "VP" 0 68.5661 -1468 -23 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3072 224 0 0 0 0 0 0 0 0 0 0
+node "XOR_IN1" 7 1104.5 -1047 107 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 16842 1330 29889 1900 0 0 0 0 0 0 0 0
+node "XOR_IN2" 34 974.125 -1145 109 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 595 104 9519 652 24908 2374 0 0 0 0 0 0 0 0
+equiv "XOR_IN2" "inv_in"
+node "li_n961_n271#" 15 51.4586 -961 -271 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 986 126 0 0 0 0 0 0 0 0 0 0 0 0
+node "inv_out" 555 524.549 -1247 -560 m1 0 0 0 0 0 0 0 0 2976 220 2976 220 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7586 636 4856 498 0 0 0 0 0 0 0 0 0 0
+node "a_n1307_n434#" 791 178.597 -1307 -434 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3775 528 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_n961_n271#" 57 80.1935 -961 -271 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 986 126 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VP" 2334 882.422 -1427 -359 m1 0 0 0 0 22318 634 0 0 2976 220 2976 220 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5518 302 23488 1184 11168 782 0 0 0 0 0 0 0 0
+substrate "VN" 0 0 -1427 -493 m1 0 0 0 0 0 0 0 0 2976 220 2976 220 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5518 302 23444 1184 5983 784 0 0 0 0 0 0 0 0
+cap "XOR_OUT" "a_n1307_n434#" 0.198416
+cap "a_n961_n271#" "XOR_IN1" 0.322099
+cap "XOR_IN1" "VP" 62.5925
+cap "XOR_OUT" "XOR_IN1" 7.61718
+cap "li_n961_n271#" "XOR_IN1" 0.811709
+cap "XOR_OUT" "a_n961_n271#" 0.263356
+cap "VP" "a_n1307_n434#" 53.1315
+cap "li_n961_n271#" "a_n961_n271#" 9.28418
+cap "VP" "XOR_IN1" 175.595
+cap "XOR_OUT" "li_n961_n271#" 0.466587
+cap "VP" "VP" 15.5556
+cap "VP" "a_n961_n271#" 0.132547
+cap "XOR_OUT" "VP" 10.0373
+cap "m1_n1257_n236#" "XOR_IN1" 52.0916
+cap "li_n961_n271#" "VP" 0.222499
+cap "XOR_IN1" "m1_n961_n271#" 3.65561
+cap "a_n961_n271#" "m1_n1257_n236#" 0.411718
+cap "XOR_OUT" "m1_n1257_n236#" 8.72574
+cap "inv_out" "a_n1307_n434#" 22.5808
+cap "li_n961_n271#" "m1_n1257_n236#" 0.569685
+cap "XOR_OUT" "m1_n961_n271#" 12.5098
+cap "inv_out" "XOR_IN1" 20.1735
+cap "li_n961_n271#" "m1_n961_n271#" 11.2601
+cap "VP" "m1_n1257_n236#" 103.495
+cap "XOR_OUT" "inv_out" 4.81429
+cap "VP" "inv_out" 235.653
+cap "XOR_IN2" "a_n1307_n434#" 15.6
+cap "m1_n1257_n236#" "m1_n961_n271#" 10.127
+cap "XOR_IN2" "XOR_IN1" 497.714
+cap "inv_out" "m1_n1257_n236#" 5.70245
+cap "XOR_IN2" "VP" 44.7679
+cap "XOR_IN2" "a_n961_n271#" 0.0282397
+cap "XOR_OUT" "XOR_IN2" 6.28735
+cap "XOR_IN2" "li_n961_n271#" 0.0391623
+cap "XOR_IN2" "VP" 518.486
+cap "XOR_IN2" "m1_n1257_n236#" 5.36825
+cap "XOR_IN2" "inv_out" 71.155
+cap "XOR_IN1" "a_n1307_n434#" 0.930752
+cap "inverter_1/inv_in" "inverter_0/inv_out" 10.8204
+cap "inverter_1/inv_in" "inverter_0/a_458_119#" 4.21921
+cap "inverter_1/VP" "inverter_1/inv_out" -85.296
+cap "inverter_0/inv_out" "transmissionGate_0/a_n15_n195#" -1.1064
+cap "inverter_0/a_458_119#" "transmissionGate_0/a_n15_n195#" 1.32515
+cap "inverter_1/VP" "transmissionGate_0/a_n15_93#" 0.41184
+cap "inverter_1/VN" "inverter_1/inv_out" -108.106
+cap "inverter_1/VP" "inverter_1/VN" 77.3175
+cap "inverter_0/inv_out" "inverter_0/inv_in" 64.1768
+cap "inverter_1/a_458_119#" "transmissionGate_1/a_n15_n195#" 1.16012
+cap "inverter_0/a_458_119#" "inverter_0/inv_in" 2.68676
+cap "inverter_1/VP" "transmissionGate_1/Y" 85.2735
+cap "inverter_0/a_458_119#" "inverter_1/a_458_119#" 2.80676
+cap "inverter_1/inv_out" "transmissionGate_1/Y" -4.43748
+cap "inverter_1/VP" "inverter_1/inv_in" -133.004
+cap "inverter_1/inv_in" "inverter_1/inv_out" -35.4854
+cap "inverter_1/VN" "transmissionGate_1/Y" 83.5962
+cap "inverter_1/VP" "transmissionGate_0/a_n15_n195#" 0.773609
+cap "inverter_1/inv_in" "inverter_1/VN" -171.318
+cap "inverter_1/VP" "inverter_0/inv_in" 416.586
+cap "inverter_1/inv_out" "transmissionGate_0/a_n15_n195#" 0.0221531
+cap "inverter_1/inv_in" "transmissionGate_0/a_n15_93#" 0.203747
+cap "inverter_1/inv_out" "inverter_0/inv_in" 27.7543
+cap "inverter_1/VN" "transmissionGate_0/a_n15_n195#" 0.255151
+cap "transmissionGate_0/a_n15_93#" "inverter_0/inv_in" 2.33027
+cap "inverter_1/VN" "inverter_0/inv_in" 244.606
+cap "inverter_1/inv_in" "transmissionGate_1/Y" -4.32707
+cap "inverter_1/inv_out" "transmissionGate_1/a_n15_n195#" 0.253691
+cap "inverter_1/VP" "inverter_1/a_458_119#" -50.2779
+cap "inverter_1/inv_out" "inverter_1/a_458_119#" -19.5706
+cap "inverter_1/VN" "transmissionGate_1/a_n15_n195#" 0.0379868
+cap "transmissionGate_0/a_n15_n195#" "transmissionGate_1/Y" 2.61134
+cap "transmissionGate_1/Y" "inverter_0/inv_in" 1.40008
+cap "inverter_1/VN" "inverter_1/a_458_119#" -9.78109
+cap "inverter_1/inv_out" "inverter_0/inv_out" 3.57994
+cap "inverter_1/VP" "inverter_0/inv_out" 40.1043
+cap "inverter_1/inv_in" "transmissionGate_0/a_n15_n195#" 0.177185
+cap "inverter_1/VP" "inverter_0/a_458_119#" 5.76786
+cap "inverter_1/inv_in" "inverter_0/inv_in" 46.4315
+cap "inverter_1/inv_out" "inverter_0/a_458_119#" 0.0795179
+cap "inverter_1/VN" "inverter_0/inv_out" 27.3618
+cap "transmissionGate_0/a_n15_93#" "inverter_0/inv_out" 0.0228992
+cap "transmissionGate_0/a_n15_93#" "inverter_0/a_458_119#" 0.638037
+cap "transmissionGate_0/a_n15_n195#" "inverter_0/inv_in" 1.86202
+cap "inverter_1/VN" "inverter_0/a_458_119#" 0.79892
+cap "inverter_1/a_458_119#" "transmissionGate_1/Y" 0.0776917
+cap "inverter_1/inv_in" "transmissionGate_1/a_n15_n195#" 0.0913782
+cap "inverter_1/inv_in" "inverter_1/a_458_119#" -14.2758
+cap "inverter_0/inv_out" "transmissionGate_1/Y" 49.2989
+cap "transmissionGate_1/a_n15_n195#" "inverter_0/inv_in" 0.948732
+cap "inverter_1/a_458_119#" "transmissionGate_0/a_n15_n195#" 0.725076
+cap "inverter_0/a_458_119#" "transmissionGate_1/Y" 0.259887
+cap "inverter_1/a_458_119#" "inverter_0/inv_in" -0.31492
+merge "transmissionGate_0/VN" "transmissionGate_1/VN" -460.168 0 0 0 0 0 0 0 0 -2976 -220 -2976 -220 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -5518 -302 -10579 -828 0 0 0 0 0 0 0 0 0 0
+merge "transmissionGate_1/VN" "inverter_0/VN"
+merge "inverter_0/VN" "inverter_1/VN"
+merge "inverter_1/VN" "VN"
+merge "transmissionGate_0/X'" "transmissionGate_1/X" -409.579 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -204 -148 -2130 -460 0 0 0 0 0 0 0 0 0 0
+merge "transmissionGate_1/X" "inverter_0/inv_out"
+merge "inverter_0/inv_out" "m1_n1257_n236#"
+merge "m1_n1257_n236#" "m1_n961_n271#"
+merge "m1_n961_n271#" "li_n961_n271#"
+merge "transmissionGate_0/a_n15_n195#" "transmissionGate_1/a_n15_93#" -86.4682 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -204 -148 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "transmissionGate_1/a_n15_93#" "a_n961_n271#"
+merge "transmissionGate_0/X" "transmissionGate_1/X'" -395.276 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -5334 -566 0 0 0 0 0 0 0 0 0 0
+merge "transmissionGate_1/X'" "inverter_0/inv_in"
+merge "inverter_0/inv_in" "XOR_IN1"
+merge "transmissionGate_0/VP" "transmissionGate_1/VP" -800.123 0 0 0 0 -22318 -634 0 0 -2976 -220 -2976 -220 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -5518 -302 -11282 -952 0 0 0 0 0 0 0 0 0 0
+merge "transmissionGate_1/VP" "inverter_0/VP"
+merge "inverter_0/VP" "inverter_1/VP"
+merge "inverter_1/VP" "VP"
+merge "transmissionGate_0/A" "inverter_1/inv_in" -168.059 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -595 -104 -7680 -514 0 0 0 0 0 0 0 0 0 0
+merge "inverter_1/inv_in" "XOR_IN2"
+merge "transmissionGate_1/A" "inverter_1/inv_out" -276.316 0 0 0 0 0 0 0 0 -2976 -220 -2976 -220 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -6938 -582 -1352 -206 0 0 0 0 0 0 0 0 0 0
+merge "inverter_1/inv_out" "inv_out"
+merge "transmissionGate_0/Y" "transmissionGate_1/Y" -123.795 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -375 -130 0 0 0 0 0 0 0 0 0 0
+merge "transmissionGate_1/Y" "XOR_OUT"
+merge "inverter_1/a_458_119#" "a_n1307_n434#" -173.024 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3775 -528 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0

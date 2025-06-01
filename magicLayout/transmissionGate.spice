@@ -1,0 +1,4 @@
+* SPICE3 file created from transmissionGate.ext - technology: sky130A
+
+X0 Y a_n15_n195# A VN sky130_fd_pr__nfet_01v8 ad=0.328 pd=2.42 as=0.32 ps=2.4 w=0.8 l=0.15
+X1 Y a_n15_93# A VP sky130_fd_pr__pfet_01v8 ad=0.32 pd=2.4 as=0.32 ps=2.4 w=0.8 l=0.15

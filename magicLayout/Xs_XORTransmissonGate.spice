@@ -1,0 +1,45 @@
+** sch_path: /home/safal/projects/GitHub_CMOS_4bit_ALU/AllSymbols&Sch/Gates/XORTransmissonGate.sch
+**.subckt XORTransmissonGate XOR_IN1 VP XOR_IN2 XOR_OUT
+*.ipin XOR_IN2
+*.ipin XOR_IN1
+*.opin XOR_OUT
+*.iopin VP
+x1 XOR_IN1 VP XOR_IN2 XOR_OUT GND net1 TransmissionGate
+x2 net1 VP net2 XOR_OUT GND XOR_IN1 TransmissionGate
+x3 VP net2 XOR_IN2 inverter
+x4 VP net1 XOR_IN1 inverter
+**.ends
+
+* expanding   symbol:  /home/safal/projects/GitHub_CMOS_4bit_ALU/AllSymbols&Sch/GenericSym/TransmissionGate.sym # of pins=6
+** sym_path: /home/safal/projects/GitHub_CMOS_4bit_ALU/AllSymbols&Sch/GenericSym/TransmissionGate.sym
+** sch_path: /home/safal/projects/GitHub_CMOS_4bit_ALU/AllSymbols&Sch/GenericSym/TransmissionGate.sch
+.subckt TransmissionGate X VP A Y VN X'
+*.ipin A
+*.opin Y
+*.ipin X'
+*.ipin X
+*.iopin VP
+*.iopin VN
+XM1 A X Y VP sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad=0.29 as=0.29 pd=2.58 ps=2.58 nrd=0.29 nrs=0.29 sa=0 sb=0 sd=0 mult=1 m=1
+XM2 A X' Y VN sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad=0.29 as=0.29 pd=2.58 ps=2.58 nrd=0.29 nrs=0.29 sa=0 sb=0 sd=0 mult=1 m=1
+**** begin user architecture code
+
+.lib /usr/local/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+
+**** end user architecture code
+.ends
+
+
+* expanding   symbol:  /home/safal/projects/GitHub_CMOS_4bit_ALU/AllSymbols&Sch/GenericSym/inverter.sym # of pins=3
+** sym_path: /home/safal/projects/GitHub_CMOS_4bit_ALU/AllSymbols&Sch/GenericSym/inverter.sym
+** sch_path: /home/safal/projects/GitHub_CMOS_4bit_ALU/AllSymbols&Sch/GenericSym/inverter.sch
+.subckt inverter VP inv_out inv_in
+*.ipin inv_in
+*.opin inv_out
+*.iopin VP
+XM1 inv_out inv_in VP VP sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 ad=0.58 as=0.58 pd=4.58 ps=4.58 nrd=0.145 nrs=0.145 sa=0 sb=0 sd=0 mult=1 m=1
+XM2 inv_out inv_in GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad=0.29 as=0.29 pd=2.58 ps=2.58 nrd=0.29 nrs=0.29 sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+.GLOBAL GND
+.end

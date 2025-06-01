@@ -1,0 +1,110 @@
+# 🔢 4-bit ALU using CMOS Logic
+
+This project implements a **4-bit Arithmetic Logic Unit (ALU)** using **CMOS logic** at the transistor level.
+
+---
+
+## ✨ Features
+
+The ALU supports the following operations:
+
+1. Addition  
+2. Subtraction  
+3. Bitwise OR  
+4. Bitwise AND  
+
+---
+
+## 📦 What's Included in This Project?
+
+- ✅ Transistor-level implementation using **nMOS** and **pMOS**
+- ✅ Custom symbols created in **Xschem**
+- ✅ Modular schematic design
+- ✅ Functional simulation using **NGSpice**
+- ✅ Physical layout for basic modules like **Inverter** and **Logic Gates** (using Magic)
+
+---
+
+## 🧰 Tools & Software Used
+
+All tools used in this project are **open source**:
+
+| Software   | Purpose             |
+|------------|---------------------|
+| **Xschem** | Schematic capture   |
+| **NGSpice**| Circuit simulation  |
+| **Magic**  | Layout design       |
+
+---
+
+## 📁 File Structure Overview
+
+```
+4bitALU_CMOS/
+├── AllSymbols&Sch/     # Schematic and symbol files for modules
+├── ALU_TOP_MODEL/      # Top-level ALU schematic and symbol
+├── magiLayout/         # Physical layout files (Magic)
+└── README.md
+```
+
+---
+
+## 🛠️ How to View Schematic Files
+
+### 🧩 Requirements
+
+- Install `xschem` and `ngspice` on your system.
+- Install the Sky130 PDK (or required model files for simulation).
+
+### 📌 Steps
+
+1. Clone or download the project.
+2. Open a terminal and navigate to the folder containing your `.sch` file.
+3. Run:
+   ```bash
+   xschem filename.sch
+   ```
+4. For submodules (non-top-level), **manually supply voltage sources** (e.g., 1.8V for logic '1', 0V for logic '0').
+5. Add model library path by inserting this into your schematic using `code_shown.sym`:
+   ```
+   .lib /usr/local/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+   ```
+6. Run simulation via the Xschem interface or save a netlist and simulate in NGSpice.
+
+---
+
+## 🚀 How to Run the ALU
+
+1. Make sure all required files are installed on your system.
+2. Navigate to the `ALU_TOP_MODEL` folder.
+3. Launch the schematic in Xschem:
+   ```bash
+   xschem ALUSimulate.sch
+   ```
+4. **Apply input voltages** using voltage sources:
+   - Use `1.8V` for logic high (`1`)
+   - Use `0V` for logic low (`0`)
+
+### 🔘 Operation Selection (Control Signals)
+
+| S0 | S1 | Operation     |
+|----|----|---------------|
+| 0  | 0  | Subtraction   |
+| 0  | 1  | Addition       |
+| 1  | 0  | AND           |
+| 1  | 1  | OR            |
+
+5. Click the **"Netlist"** button to generate a netlist.
+6. If any **missing symbol** errors appear:
+   - Open the submodule `.sch` file.
+   - Press `Ctrl + I` to manually re-insert the missing `.sym` by navigating to the correct symbol path.
+
+7. Launch NGSpice simulation and plot the waveforms:
+   ```bash
+   plot <terminal_name>
+   ```
+
+---
+
+
+

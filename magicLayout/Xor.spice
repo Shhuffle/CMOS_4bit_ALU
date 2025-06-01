@@ -1,0 +1,22 @@
+* SPICE3 file created from Xor.ext - technology: sky130A
+
+.subckt inverter inv_out VN inv_in VP a_458_119#
+X0 inv_out a_458_119# VN VN sky130_fd_pr__nfet_01v8 ad=0.2976 pd=2.2 as=0.2976 ps=2.2 w=0.62 l=0.15
+X1 inv_out a_458_119# VP VP sky130_fd_pr__pfet_01v8 ad=0.2976 pd=2.2 as=0.2976 ps=2.2 w=0.62 l=0.15
+.ends
+
+.subckt transmissionGate VN X' X A VP Y a_n15_n195# a_n15_93#
+X0 Y a_n15_n195# A VN sky130_fd_pr__nfet_01v8 ad=0.328 pd=2.42 as=0.32 ps=2.4 w=0.8 l=0.15
+X1 Y a_n15_93# A VP sky130_fd_pr__pfet_01v8 ad=0.32 pd=2.4 as=0.32 ps=2.4 w=0.8 l=0.15
+.ends
+
+.subckt Xor inv_out VN VP XOR_IN1 XOR_IN2 XOR_OUT
+Xinverter_0 inverter_0/inv_out VN XOR_IN1 VP inverter_0/a_458_119# inverter
+Xinverter_1 inv_out VN XOR_IN2 VP a_n1307_n434# inverter
+XtransmissionGate_0 VN inverter_0/inv_out XOR_IN1 XOR_IN2 VP XOR_OUT a_n961_n271#
++ transmissionGate_0/a_n15_93# transmissionGate
+XtransmissionGate_1 VN XOR_IN1 inverter_0/inv_out inv_out VP XOR_OUT transmissionGate_1/a_n15_n195#
++ a_n961_n271# transmissionGate
+C0 VP VN 2.07663f
+.ends
+
