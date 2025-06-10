@@ -27,7 +27,6 @@ C {lab_pin.sym} 160 -540 1 1 {name=p7 sig_type=std_logic lab=A2
 C {lab_pin.sym} 200 -540 1 1 {name=p10 sig_type=std_logic lab=A3
 }
 C {lab_pin.sym} 140 -540 3 0 {name=p5 sig_type=std_logic lab=B1}
-C {ALU.sym} 850 -660 0 0 {name=x1}
 C {lab_pin.sym} -60 -840 0 0 {name=p3 sig_type=std_logic lab=B0}
 C {lab_pin.sym} 350 -840 0 0 {name=p4 sig_type=std_logic lab=B0}
 C {lab_pin.sym} 170 -780 0 0 {name=p11 sig_type=std_logic lab=B0}
@@ -49,3 +48,4 @@ C {lab_pin.sym} 370 -670 1 1 {name=p1 sig_type=std_logic lab=CY
 }
 C {lab_pin.sym} -90 -600 3 1 {name=p2 sig_type=std_logic lab=A0
 }
+C {/home/safal/projects/GitHub_CMOS_4bit_ALU/ALU_TOP_MODEL/ALU.sym} 850 -660 0 0 {name=x1}
